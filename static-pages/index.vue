@@ -1,7 +1,7 @@
 <template>
     <div class="mainScreen">
         <v-icon class="scale" >mdi-scale-balance</v-icon>
-        <v-btn class="marginTop"  nuxt to="/loginPage"> Zacznij trading ! </v-btn>
+        <v-btn class="marginTop" nuxt to="/loginPage"> Zacznij trading ! </v-btn>
     </div>
 </template>
 <script lang="ts">

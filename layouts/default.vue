@@ -41,10 +41,7 @@ export default class DefaultLayout extends Vue {
   title = 'TrandingApp';
   drawer = false;
   items = EnumMenuItems.getAllValues();
-  autors = null;
-  created() {
-    this.autors = EnumAutors;
-  }
+  autors = EnumAutors;
 }
 </script>
 
