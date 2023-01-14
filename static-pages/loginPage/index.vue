@@ -2,8 +2,8 @@
     <div class="mainScreen">
         <v-container>
             <v-text-field v-model="user.email" label="email"></v-text-field>
-            <v-text-field v-model="user.password" label="password"></v-text-field>
-            <div> Create account </div>
+            <v-text-field v-model="user.password" label="password" type="password"></v-text-field>
+            <NuxtLink to="/register"> Create account </NuxtLink>
             <v-btn @click="loginAction"> Login </v-btn>
         </v-container>
     </div>
@@ -18,7 +18,6 @@ export default class LoginPage extends Vue {
     user: User = new User();
 
     loginAction() {
-        console.log('loginAction');
         this.$router.push('/dashboard');
     }
 }

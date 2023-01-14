@@ -1,7 +1,7 @@
 
 
 export enum EnumAutors {
-    autor1 = 'Karol Rutkowski',
-    autor2 = 'Cezary Chromicz',
-    autor3 = 'Vladyslav Pochelov',
+    autor1 = 'Karol',
+    autor2 = 'Patryk',
+    autor3 = 'Dominik',
 }

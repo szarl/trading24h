@@ -1,19 +1,28 @@
 import Address from "./Address";
+import { IsNumber, IsOptional, IsEmail, IsPhoneNumber, IsNotEmpty, IsDate } from 'class-validator';
 
 export default class User {
+
+    @IsOptional()
+    @IsNumber()
     id: number;
 
+    @IsNotEmpty()
     name: string;
 
+    @IsNotEmpty()
     surname: string;
 
+    @IsEmail()
     email: string;
 
+    @IsPhoneNumber()
     phoneNumber: string;
 
-    password: string;
+    @IsDate()
+    dob: Date;
 
-    created: Date;
+    password: string;
 
     address: Address;
 
