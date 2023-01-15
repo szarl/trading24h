@@ -18,6 +18,7 @@ export default class LoginPage extends Vue {
     user: User = new User();
 
     loginAction() {
+        // TODO: set user loggin service
         this.$router.push('/dashboard');
     }
 }

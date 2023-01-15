@@ -76,6 +76,9 @@ const nuxtConfig: NuxtConfig = {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     postcss: null,
+    extend(config) {
+        config.devtool = '#inline-source-map';
+    }
   } as NuxtOptionsBuild,
 }
 

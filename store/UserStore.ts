@@ -9,6 +9,10 @@ import { store } from './StoreHelper';
 class UserModule extends VuexModule {
     user: User = new User({address: new Address({})});
 
+    get isLoggedIn(): boolean {
+        return this.user.id !== undefined;
+    }
+
     @Mutation
     setUser(user: User) {
         this.user = user;
@@ -16,6 +20,7 @@ class UserModule extends VuexModule {
 
     @Action
     async register() {
+        // TODO: register user
         await axios.post('').then((response) => {
                 this.user.id = response.data.id;
             })
@@ -26,6 +31,7 @@ class UserModule extends VuexModule {
 
     @Action
     async login() {
+        // TODO: login user
         await axios.post('').then((response) => {
             this.setUser(response.data);
         })

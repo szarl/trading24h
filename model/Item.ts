@@ -2,7 +2,7 @@
 export default class Item {
     id: number;
 
-    ownerId: string;
+    ownerId: number;
 
     title: string;
 

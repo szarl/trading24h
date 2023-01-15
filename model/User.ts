@@ -1,5 +1,5 @@
 import Address from "./Address";
-import { IsNumber, IsOptional, IsEmail, IsPhoneNumber, IsNotEmpty, IsDate } from 'class-validator';
+import { IsNumber, IsOptional, IsEmail, IsPhoneNumber, IsNotEmpty, IsDate, MinLength } from 'class-validator';
 
 export default class User {
 
@@ -20,8 +20,9 @@ export default class User {
     phoneNumber: string;
 
     @IsDate()
-    dob: Date;
+    dob: Date = new Date();
 
+    @MinLength(8)
     password: string;
 
     address: Address;

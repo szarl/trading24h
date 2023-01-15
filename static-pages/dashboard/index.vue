@@ -12,11 +12,6 @@ import User from "~/model/User";
 
 @Component
 export default class Dashboard extends Vue {
-    user: User = new User();
-
-    loginAction() {
-        this.$router.push('/dashboard');
-    }
 }
 </script>
 <style>
