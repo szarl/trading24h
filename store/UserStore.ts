@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { Action, getModule, Module, Mutation, VuexModule } from 'vuex-module-decorators';
+import { userService } from '~/mod/userService';
 import Address from '~/model/Address';
 import User from '~/model/User';
 import { store } from './StoreHelper';
@@ -20,13 +21,8 @@ class UserModule extends VuexModule {
 
     @Action
     async register() {
-        // TODO: register user
-        await axios.post('').then((response) => {
-                this.user.id = response.data.id;
-            })
-            .catch((e) => {
-                throw new Error(e)
-            });
+        const currentUser = await userService.register(this.user);
+        this.setUser(currentUser);
     }
 
     @Action

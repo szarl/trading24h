@@ -13,10 +13,14 @@
 import Component from "vue-class-component";
 import Vue from "vue";
 import { userStore } from "~/store/UserStore";
+import User from "~/model/User";
 
 @Component
 export default class Profile extends Vue {
-    user = userStore.user;
+    // TODO:
+    // user = userStore.user;
+
+    user: User = new User(JSON.parse(localStorage.getItem('user')));
 }
 </script>
 <style>

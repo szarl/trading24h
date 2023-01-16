@@ -48,7 +48,8 @@ export default class LoginPage extends Vue {
     }
 
     save(date) {
-        this.$refs.menu.save(date);
+        // this.$refs.menu.save(date);
+        this.date = date;
         this.user.dob = new Date(date);
     };
 
@@ -77,7 +78,9 @@ export default class LoginPage extends Vue {
         this.$forceUpdate();
 
         if (Object.entries(this.validation).length === 0) {
-            userStore.setUser(this.user);
+            localStorage.setItem('user', JSON.stringify(this.user));
+            // TODO: fix middleware
+            // userStore.setUser(this.user);
             this.$router.push('/addressRegister');
         }
     }

@@ -20,7 +20,7 @@ export default class User {
     phoneNumber: string;
 
     @IsDate()
-    dob: Date = new Date();
+    dob: Date;
 
     @MinLength(8)
     password: string;

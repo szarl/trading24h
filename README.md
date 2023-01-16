@@ -80,4 +80,5 @@ More information about the usage of this directory in [the documentation](https:
     + vue-property-decorator
     + axios
     + class-validator
+    + class-transformer
     + lodash

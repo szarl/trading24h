@@ -28,7 +28,9 @@ export default class AddressRegister extends Vue {
     }
 
     created() {
-        this.user = userStore.user;
+        this.user = new User(JSON.parse(localStorage.getItem('user')));
+        // console.log(this.user);
+        // this.user = userStore.user;
     }
 
     back() {
@@ -37,6 +39,7 @@ export default class AddressRegister extends Vue {
 
     async nextStep() {
         await userStore.register();
+        localStorage.setItem('user', JSON.stringify(userStore.user));
         this.$router.push('/dashboard');
     }
 }

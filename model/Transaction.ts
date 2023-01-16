@@ -1,11 +1,12 @@
 import Item from "./Item";
+import User from "./User";
 
 export default class Transaction {
     id: number;
 
-    owner: string;
+    owner: User;
 
-    requester: string;
+    requester: User;
 
     ownerItems: Item[];
 

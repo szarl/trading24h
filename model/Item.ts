@@ -1,18 +1,24 @@
+import { Category } from "./Category";
+import User from "./User";
 
 export default class Item {
     id: number;
 
-    ownerId: number;
+    owner: User;
 
-    title: string;
+    name: string;
 
     amount: string;
 
     price: string;
 
-    picture: string;
-
     description: string;
+
+    addedDate: Date = new Date();
+
+    imageUrl: string;
+
+    category: Category;
 
     constructor (item?: Partial<Item>) {
         if (item) {
