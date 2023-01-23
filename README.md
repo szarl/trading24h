@@ -19,7 +19,7 @@ $ npm run generate
 
 ## Build Setup
 
-Backend setup: https://github.com/HappySennin/TradingApp
+Backend setup: https://github.com/patryick/Trading24
 
 ## Special Directories
 
