@@ -19,6 +19,8 @@ $ npm run generate
 
 ## Build Setup
 
+Frontend setup: [node.js](https://nodejs.org/en/)
+
 Backend setup: https://github.com/patryick/Trading24
 
 ## Special Directories
@@ -72,6 +74,7 @@ More information about the usage of this directory in [the documentation](https:
 
 
 ## Technology front-end stack
+    + Typescript
     + vue2
     + nuxt
     + vuetify
