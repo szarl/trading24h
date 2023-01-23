@@ -7,7 +7,7 @@
 $ npm install
 
 # serve with hot reload at localhost:3333
-$ npm run \local
+$ npm run local
 
 # build for production and launch server
 $ npm run build
